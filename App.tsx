@@ -2,20 +2,17 @@ import React, { useState, useMemo } from 'react';
 import { Sidebar } from './components/Sidebar';
 import { Header } from './components/Header';
 import { Tab, ViewMode } from './types';
-import { AIAssistantTab } from './components/tabs/AIAssistantTab';
-import { InsightJudgmentTab } from './components/tabs/InsightJudgmentTab';
-import { DiversityEthicsTab } from './components/tabs/DiversityEthicsTab';
-import { CandidateProfilesTab } from './components/tabs/CandidateProfilesTab';
+import { CandidatesTab } from './components/tabs/CandidatesTab';
+import { QualityAndEthicsTab } from './components/tabs/QualityAndEthicsTab';
 import { JobRequisitionsTab } from './components/tabs/JobRequisitionsTab';
-import { CandidatePipelineTab } from './components/tabs/CandidatePipelineTab';
+import { PipelineAndInterviewsTab } from './components/tabs/PipelineAndInterviewsTab';
 import { CandidateExperienceTab } from './components/tabs/CandidateExperienceTab';
 import { ProactiveSourcingTab } from './components/tabs/ProactiveSourcingTab';
 import { OfferManagementTab } from './components/tabs/OfferManagementTab';
 import { OnboardingTab } from './components/tabs/OnboardingTab';
-import { PerformanceCreativityTab } from './components/tabs/PerformanceCreativityTab';
-import { PredictiveAnalyticsTab } from './components/tabs/PredictiveAnalyticsTab';
-import { IntegrationUpskillingTab } from './components/tabs/IntegrationUpskillingTab';
-import { AdoptionCommunityTab } from './components/tabs/AdoptionCommunityTab';
+import { TeamAndCommunityTab } from './components/tabs/TeamAndCommunityTab';
+import { AnalyticsAndComplianceTab } from './components/tabs/AnalyticsAndComplianceTab';
+import { AutomationAndIntegrationsTab } from './components/tabs/AutomationAndIntegrationsTab';
 import { OperationalDashboardTab } from './components/tabs/OperationalDashboardTab';
 import { TABS } from './constants';
 import { HiringManagerDashboardTab } from './components/tabs/HiringManagerDashboardTab';
@@ -37,18 +34,14 @@ const App: React.FC = () => {
         return currentView === 'recruiter' 
           ? <OperationalDashboardTab /> 
           : <HiringManagerDashboardTab currentUser={currentUser} setActiveTab={setActiveTab} />;
-      case Tab.AIAssistant:
-        return <AIAssistantTab />;
+      case Tab.Candidates:
+        return <CandidatesTab currentView={currentView} currentUser={currentUser} />;
       case Tab.InsightJudgment:
-        return <InsightJudgmentTab />;
-      case Tab.DiversityEthics:
-        return <DiversityEthicsTab />;
-      case Tab.CandidateProfiles:
-        return <CandidateProfilesTab currentView={currentView} currentUser={currentUser} />;
+        return <QualityAndEthicsTab />;
       case Tab.JobRequisitions:
         return <JobRequisitionsTab currentView={currentView} currentUser={currentUser} />;
       case Tab.CandidatePipeline:
-        return <CandidatePipelineTab currentView={currentView} currentUser={currentUser} />;
+        return <PipelineAndInterviewsTab currentView={currentView} currentUser={currentUser} />;
       case Tab.CandidateExperience:
         return <CandidateExperienceTab currentView={currentView} currentUser={currentUser} />;
       case Tab.ProactiveSourcing:
@@ -62,13 +55,11 @@ const App: React.FC = () => {
       case Tab.InternalMobility:
         return <InternalMobilityTab />;
       case Tab.PerformanceCreativity:
-        return <PerformanceCreativityTab />;
+        return <TeamAndCommunityTab />;
       case Tab.PredictiveAnalytics:
-        return <PredictiveAnalyticsTab />;
+        return <AnalyticsAndComplianceTab />;
       case Tab.IntegrationUpskilling:
-        return <IntegrationUpskillingTab />;
-      case Tab.AdoptionCommunity:
-        return <AdoptionCommunityTab />;
+        return <AutomationAndIntegrationsTab />;
       default:
         const tabInfo = TABS.find(t => t.id === activeTab);
         return <div>{tabInfo?.name || 'Unknown'} tab is not implemented.</div>;

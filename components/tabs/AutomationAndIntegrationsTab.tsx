@@ -40,7 +40,7 @@ const WIDGET_CODE = `<div id="recruiter-ai-jobs"></div>
   async>
 </script>`;
 
-export const IntegrationUpskillingTab: React.FC = () => {
+export const AutomationAndIntegrationsTab: React.FC = () => {
     const [connectedATS, setConnectedATS] = useState<string | null>('Greenhouse');
     const [syndication, setSyndication] = useState({ linkedIn: true, indeed: true, glassdoor: false, zipRecruiter: true });
     const [syncOptions, setSyncOptions] = useState({ newCandidates: true, requisitions: true, statusUpdates: false });

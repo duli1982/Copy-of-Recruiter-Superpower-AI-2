@@ -92,7 +92,7 @@ const PipelineColumn: React.FC<{
     );
 };
 
-export const CandidatePipelineTab: React.FC<CandidatePipelineTabProps> = ({ currentView, currentUser }) => {
+export const PipelineAndInterviewsTab: React.FC<CandidatePipelineTabProps> = ({ currentView, currentUser }) => {
     const [allCandidates] = useState<Candidate[]>(() => getInitialData(CANDIDATES_STORAGE_KEY, MOCK_CANDIDATES));
     const [allRequisitions] = useState<JobRequisition[]>(() => getInitialData(REQUISITIONS_STORAGE_KEY, MOCK_JOB_REQUISITIONS));
     const [pipelineData, setPipelineData] = useState<PipelineData>(() => getInitialData(PIPELINE_STORAGE_KEY, MOCK_PIPELINE_DATA));

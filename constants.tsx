@@ -28,22 +28,19 @@ const ArrowUpCircleIcon = (props: React.SVGProps<SVGSVGElement>) => <svg {...pro
 
 export const TABS: TabInfo[] = [
   { id: Tab.Dashboard, name: "Dashboard", icon: <BarChartIcon /> },
-  { id: Tab.AIAssistant, name: "AI Assistant", icon: <WandIcon /> },
-  { id: Tab.InsightJudgment, name: "Insight & Judgment", icon: <TargetIcon /> },
-  { id: Tab.DiversityEthics, name: "Diversity & Ethics", icon: <ShieldIcon /> },
-  { id: Tab.CandidateProfiles, name: "Candidate Profiles", icon: <UsersIcon /> },
+  { id: Tab.Candidates, name: "Candidates", icon: <UsersIcon /> },
+  { id: Tab.InsightJudgment, name: "Quality & Ethics", icon: <ShieldIcon /> },
   { id: Tab.JobRequisitions, name: "Job Requisitions", icon: <BriefcaseIcon /> },
-  { id: Tab.CandidatePipeline, name: "Candidate Pipeline", icon: <GitBranchIcon /> },
+  { id: Tab.CandidatePipeline, name: "Pipeline & Interviews", icon: <GitBranchIcon /> },
   { id: Tab.CandidateExperience, name: "Candidate Experience", icon: <CalendarIcon /> },
   { id: Tab.ProactiveSourcing, name: "Proactive Sourcing", icon: <SearchIcon /> },
   { id: Tab.OfferManagement, name: "Offer Management", icon: <GiftIcon /> },
   { id: Tab.Onboarding, name: "Onboarding", icon: <UserCheckIcon /> },
   { id: Tab.EmployeeReferrals, name: "Employee Referrals", icon: <Share2Icon /> },
   { id: Tab.InternalMobility, name: "Internal Mobility", icon: <ArrowUpCircleIcon /> },
-  { id: Tab.PerformanceCreativity, name: "Performance & Creativity", icon: <ActivityIcon /> },
-  { id: Tab.PredictiveAnalytics, name: "Predictive Analytics", icon: <TrendingUpIcon /> },
-  { id: Tab.IntegrationUpskilling, name: "Integrations & Upskilling", icon: <SettingsIcon /> },
-  { id: Tab.AdoptionCommunity, name: "Adoption & Community", icon: <ZapIcon /> },
+  { id: Tab.PerformanceCreativity, name: "Team & Community", icon: <ActivityIcon /> },
+  { id: Tab.PredictiveAnalytics, name: "Analytics & Compliance", icon: <TrendingUpIcon /> },
+  { id: Tab.IntegrationUpskilling, name: "Automation & Integrations", icon: <SettingsIcon /> },
 ];
 
 export const MANAGER_TABS: TabInfo[] = TABS.filter(tab => [
