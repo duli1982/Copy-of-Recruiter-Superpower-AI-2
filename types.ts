@@ -6,10 +6,8 @@ import React from 'react';
 
 export enum Tab {
   Dashboard = 'dashboard',
-  AIAssistant = 'ai-assistant',
+  Candidates = 'candidates',
   InsightJudgment = 'insight-judgment',
-  DiversityEthics = 'diversity-ethics',
-  CandidateProfiles = 'candidate-profiles',
   JobRequisitions = 'job-requisitions',
   CandidatePipeline = 'candidate-pipeline',
   CandidateExperience = 'candidate-experience',
@@ -21,7 +19,6 @@ export enum Tab {
   PerformanceCreativity = 'performance-creativity',
   PredictiveAnalytics = 'predictive-analytics',
   IntegrationUpskilling = 'integration-upskilling',
-  AdoptionCommunity = 'adoption-community',
 }
 
 export enum EmailTemplateType {
